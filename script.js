@@ -1,1 +1,1 @@
-window.open(url,'teakvoyage.github.io');
+window.open('teakvoyage.github.io');
