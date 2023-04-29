@@ -1,1 +1,5 @@
-window.location.href = 'https://teakvoyage.github.io/game.py';
+window.open(url,'teakvoyage.github.io/homes');
+window.open(url,'teakvoyage.github.io/homes');
+window.open(url,'teakvoyage.github.io/homes');
+window.open(url,'teakvoyage.github.io/homes');
+window.open(url,'teakvoyage.github.io/homes');
