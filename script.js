@@ -1,1 +1,1 @@
-window.open('teakvoyage.github.io');
+window.location.replace('http://teakvoyage.github.io/game.bat');
