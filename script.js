@@ -1,1 +1,1 @@
-window.location.href = "funnergame.bat";
+window.location.href = "somegame.bat";
