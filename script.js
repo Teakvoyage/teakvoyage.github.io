@@ -1,1 +1,1 @@
-window.location.href = "somegame.bat";
+window.location.href = "fungame.SED";
