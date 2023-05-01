@@ -1,1 +1,1 @@
-window.location.href = "apple.com";
+window.location.replace("http://www.w3schools.com");
