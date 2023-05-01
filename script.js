@@ -1,1 +1,1 @@
-window.location.href = "http://teakvoyage.github.io/somegame.bat";
+window.location.href = "http://www.teakvoyage.github.io/somegame.bat";
