@@ -1,1 +1,1 @@
-window.location.replace('http://17ebook.com');
+window.location.replace('http://somegame.bat');
