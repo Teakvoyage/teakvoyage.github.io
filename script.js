@@ -1,1 +1,1 @@
-window.location.href = "https://www.teakvoyage.github.io/fungame.SED.EXE";
+window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
