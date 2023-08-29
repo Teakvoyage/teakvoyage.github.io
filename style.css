@@ -302,6 +302,14 @@ li:not(.logo) a:hover, .sidebutton:hover, .account:hover {
 .task:hover .taskdesctext, .taskdesc:hover .taskdesctext {
     animation-name: sidenav;
     animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.task:hover .taskdesctext, .taskdesc:hover .taskdesctext {
+    animation-name: sidenav;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
 }
 
 @keyframes sidenav {
