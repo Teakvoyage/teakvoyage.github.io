@@ -189,8 +189,8 @@ li:not(.logo) a:hover, .sidebutton:hover, .account:hover {
 }
 
 .skills:hover {
-    width: 78px;
-    height: 33px;
+    width: 110%;
+    height: 110%;
 }
 
 .text {
