@@ -298,7 +298,13 @@ li:not(.logo) a:hover, .sidebutton:hover, .account:hover {
 }
 
 .task:hover .taskdesctext, .taskdesc:hover .taskdesctext {
-    backdrop-filter: blur(4px) brightness(90%);
+    animation-name: sidenav;
+    animation-duration: 0.5s;
+}
+
+@keyframes sidenav {
+    from {backdrop-filter: blur(4px) brightness(90%);}
+    to {backdrop-filter: blur(0px) brightness(100%);}
 }
 
 /* End Of Profile Page */
