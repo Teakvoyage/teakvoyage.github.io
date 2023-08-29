@@ -284,8 +284,9 @@ li:not(.logo) a:hover, .sidebutton:hover, .account:hover {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     position: absolute;
-	bottom: 0;
+    bottom: 0;
     padding: 10%;
+    blur(4px) brightness(90%)
 }
 
 .taskdesctext {
@@ -295,6 +296,7 @@ li:not(.logo) a:hover, .sidebutton:hover, .account:hover {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     position: absolute;
+    backdrop-filter: blur(4px) brightness(90%)
 }
 
 .task:hover .taskdesctext, .taskdesc:hover .taskdesctext {
