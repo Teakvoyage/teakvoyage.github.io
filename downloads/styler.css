@@ -120,25 +120,15 @@ body {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     position: absolute;
-    backdrop-filter: blur(4px) brightness(90%)
+    backdrop-filter: blur(4px) brightness(90%);
 }
 
 .task:hover .taskdesctext, .taskdesc:hover .taskdesctext {
-    animation-name: sidenav;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
+    backdrop-filter: blur(0px) brightness(100%);
 }
 
 .task:hover .taskdesctext, .taskdesc:hover .taskdesctext {
-    animation-name: sidenav;
-    animation-duration: 0.5s;
-    animation-fill-mode: forwards;
-    animation-direction: reverse;
-}
-
-@keyframes sidenav {
-    from {backdrop-filter: blur(4px) brightness(90%);}
-    to {backdrop-filter: blur(0px) brightness(100%);}
+    backdrop-filter: blur(0px) brightness(100%);
 }
 
 /* End Of Profile Page */
