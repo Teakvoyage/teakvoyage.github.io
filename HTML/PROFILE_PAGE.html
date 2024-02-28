@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+My Profile
+</title>
+<style>
+
+* {
+margin: auto;
+padding: auto;
+font-family: tahoma;
+}
+
+
+
+}
+
+body {
+background-color: #FAF9F6;
+}
+
+.top_bar {
+display: flex;
+align-items: center;
+height: 6vh;
+width: auto;
+border-radius: 10px;
+}
+
+a {
+color: white;
+text-decoration: none;
+user-select: none;
+}
+
+.home {
+font-size: 23px;
+margin: 0 10vw 0 auto;
+user-select: none;
+text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+}
+
+.intro {
+padding: 5vh;
+background-image: linear-gradient(to bottom, rgba(200, 200, 200, 0.5), rgba(0, 0, 0, 0.8)), url("mountain_high_quality.jpg");
+background-size: cover;
+height: 75vh;
+width: auto;
+}
+
+.white {
+color: white;
+}
+
+.main_title {
+margin: 10vh 10vh 10vh 10vw;
+font-size: 70px;
+text-align: left;
+text-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+user-select: none;
+}
+
+.desc1 {
+font-size: 20px;
+width: 15vw;
+text-align: left;
+user-select: none;
+}
+
+.card1 {
+display: flex;
+align-items: center;
+margin: -20vh 10vw auto auto;
+padding: 2%;
+border-radius: 5%;
+height: auto;
+width: 15vw;
+backdrop-filter: blur(3px) brightness(70%);
+transition: 0.3s;
+box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+}
+
+.card1:hover {
+backdrop-filter: blur(5px) brightness(67%);
+box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+scale: 1.05;
+}
+
+.part1 {
+background-image: linear-gradient(to bottom right, #FAF9F6, #fff3f5, #ffe1e6);
+display: flex;
+height: 70vh;
+align-items: center;
+}
+
+.right_title {
+margin: 10vh 10vw 10vh auto;
+font-size: 70px;
+text-align: left;
+user-select: none;
+}
+
+.card2 {
+display: flex;
+align-items: center;
+margin: 0 0 0 10vw;
+padding: 5%;
+border-radius: 25px;
+height: auto;
+width: 26vw;
+transition: 0.3s;
+box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+background-color: white;
+}
+
+.card2:hover {
+box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+scale: 1.05;
+}
+
+.desc2 {
+color: rgb(80,80,80);
+font-size: 30px;
+user-select: none;
+height: auto;
+}
+
+.part2 {
+background-image: linear-gradient(to bottom right, #D4F1F4, #f1fafb, #FAF9F6);
+display: flex;
+height: 70vh;
+align-items: center;
+}
+
+.card3 {
+display: flex;
+align-items: center;
+margin: 0 0 0 5vw;
+padding: 5%;
+border-radius: 25px;
+height: auto;
+width: 30vw;
+transition: 0.3s;
+box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+background-color: white;
+}
+
+.card3:hover {
+box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+scale: 1.05;
+}
+
+.left_title {
+margin: 0 15vw 0 15vw;
+font-size: 70px;
+text-align: left;
+user-select: none;
+}
+
+.list {
+display: flex;
+justify-content: space-evenly;
+background-color: #F0FFFF;
+flex-wrap: wrap;
+padding: 5vh 0 15vh 0;
+}
+
+.webpage {
+display: flex;
+height: 40vh;
+width: 25vw;
+background-image: linear-gradient(to bottom, rgba(200, 200, 200, 0.5), rgba(0, 0, 0, 0.8)), url("mountain_high_quality.jpg");
+margin: 15vh 0 0 0;
+transition: 0.3s;
+box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+border-radius: 7px;
+overflow: hidden;
+}
+
+.text {
+display: flex;
+background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+text-align: center;
+align-items: center;
+margin: auto 0 0 0;
+width: inherit;
+height: 30%;
+font-size: 30px;
+padding: 3% 10% 3% 10%;
+}
+
+.webpage:hover {
+scale: 1.1;
+box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+rotate: 3deg;
+}
+
+.webpages_title {
+display: flex; 
+align-items: center; 
+margin: 0; 
+background-color: #FFF1F3; 
+height: 40vh; 
+width: auto;
+}
+
+.black {
+color: white;
+}
+
+@media (max-width: 1000px) {
+
+.main_title{
+font-size: 60px;
+}
+
+.desc1 {
+font-size: 15px;
+}
+
+.home {
+font-size: 15px;
+}
+
+.right_title {
+font-size: 60px;
+}
+
+.left_title {
+font-size: 60px;
+}
+
+.text {
+font-size: 20px;
+}
+
+.desc2 {
+font-size: 25px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="intro">
+<div class="top_bar">
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\PROFILE_PAGE.html" class="home">
+Home
+</a>
+</div>
+<h1 class="white main_title">
+ADISON'S <br>
+PROFILE <br>
+PAGE 
+</h1>
+
+<br>
+
+<div class="card1">
+<p class="white desc1">
+This is a profile page containing all my work in this semester of Web Development! Scroll down to see them!
+</p>
+</div>
+</div>
+
+<div class="part1">
+<div class="card2">
+<p class="desc2">
+This webpage is my profile page. It contains information about me and a list of webpages I've made this semester! You can see the progress I have made.
+</p>
+</div>
+<h1 class="right_title">
+ABOUT <br>
+THIS <br>
+WEBPAGE
+</h1>
+</div>
+
+<div class="part2">
+<h1 class="left_title">
+WHO <br>
+AM I?<br>
+</h1>
+<div class="card3">
+<p class="desc2">
+I'm Adison Ngo. I'm 15 and I'm a student. I like video games and coding.
+</p>
+</div>
+</div>
+
+
+<div class="webpages_title">
+<h1 style="font-size: 70px;">
+MY WEBPAGES
+</h1>
+</div>
+
+<div class="list">
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\Language.html">
+<div class="webpage"> 
+<div class="text">
+<p class="black">
+Mother Language Day
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\poemWebPage.html">
+<div class="webpage"> 
+<div class="text">
+<p class="black">
+Poem - The Invitation
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\Tribute.html">
+<div class="webpage">
+<div class="text">
+<p class="black">
+A Tribute to Terry Fox
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\Table.html">
+<div class="webpage">
+<div class="text">
+<p class="black">
+Table Tag
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\blackHistory.html">
+<div class="webpage">
+<div class="text">
+<p class="black">
+Black History Month
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\Event.html">
+<div class="webpage">
+<div class="text">
+<p class="black">
+Jazz And Juice Event
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\Computers v2.html">
+<div class="webpage">
+<div class="text">
+<p class="black">
+Computer
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\marquee.html">
+<div class="webpage">
+<div class="text">
+<p class="black">
+Marquee Tag
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\Formatting My Name.html">
+<div class="webpage">
+<div class="text">
+<p class="black">
+Formatting My Name
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\html tags B,I,U.html">
+<div class="webpage">
+<div class="text">
+<p class="black">
+HTML tags B,I,U
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\Heading.html">
+<div class="webpage">
+<div class="text">
+<p class="black">
+Heading Tag
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\anchor_tag.html">
+<div class="webpage">
+<div class="text">
+<p class="black">
+Anchor Tag
+</p>
+</div>
+</div>
+</a>
+
+<a href="C:\Users\adison.ngo\OneDrive - School District No. 36 (Surrey)\Documents\Web Development\HTML\html.html">
+<div class="webpage">
+<div class="text">
+<p class="black">
+The Very Start - html
+</p>
+</div>
+</div>
+</a>
+
+</div>
+</body>
+</html>
