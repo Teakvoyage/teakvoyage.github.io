@@ -1,0 +1,266 @@
+<html>
+    <head>
+        <title>
+            Our Solar System
+        </title>
+        <link rel="stylesheet" href="solar.css">
+        <script>
+            function normal() {
+                document.getElementById('body').style.backgroundImage="unset";
+                document.getElementById('body').style.fontFamily="'Tahoma'";
+                document.getElementById('text').style.fontFamily="'Tahoma'";
+                document.getElementById('text').style.fontSize="45px";
+                document.getElementById('title').style.backgroundColor="rgb(248,248,248)";
+                document.getElementById('title').style.backgroundImage="unset";
+                document.getElementById('title').style.backgroundSize="unset";
+                document.getElementById('title').style.backgroundPosition="unset";
+                document.getElementById('text').style.color="black";
+                let a = document.getElementsByClassName('card-right');
+                for (let i = 0; i < a.length; i++) {
+                    a[i].style.backgroundColor = "white";
+                    a[i].style.fontFamily = "'Tahoma'";
+                    a[i].style.fontSize = "16px";
+                    a[i].style.color = "black";
+                    a[i].style.boxShadow = "unset";
+                }
+            }
+
+            function pro() {
+                document.getElementById('body').style.backgroundImage="url('bg.jpg')";
+                document.getElementById('body').style.fontFamily="'Tahoma'";
+                document.getElementById('text').style.fontFamily="'Tahoma'";
+                document.getElementById('text').style.fontSize="45px";
+                document.getElementById('title').style.backgroundColor="rgba(0,0,0,0)";
+                document.getElementById('title').style.backgroundImage="url('bg.jpg')";
+                document.getElementById('title').style.backgroundSize="unset";
+                document.getElementById('title').style.backgroundPosition="unset";
+                document.getElementById('text').style.color="white";
+                let a = document.getElementsByClassName('card-right');
+                for (let i = 0; i < a.length; i++) {
+                    a[i].style.backgroundColor = "rgba(0,0,0,0)";
+                    a[i].style.fontFamily = "'Tahoma'";
+                    a[i].style.fontSize = "16px";
+                    a[i].style.color = "white";
+                    a[i].style.boxShadow = "unset";
+                }
+            }
+
+            function kids() {
+                document.getElementById('body').style.backgroundImage="url('kids.png')";
+                document.getElementById('body').style.fontFamily="'Comic Sans Ms'";
+                document.getElementById('text').style.fontFamily="'Comic Sans Ms'";
+                document.getElementById('text').style.fontSize="60px";
+                document.getElementById('title').style.backgroundColor="white";
+                document.getElementById('title').style.backgroundImage="url('kids.png')";
+                document.getElementById('title').style.backgroundSize="unset";
+                document.getElementById('title').style.backgroundPosition="unset";
+                document.getElementById('text').style.color="darkred";
+                let a = document.getElementsByClassName('card-right');
+                for (let i = 0; i < a.length; i++) {
+                    a[i].style.backgroundColor = "white";
+                    a[i].style.fontFamily = "'Comic Sans MS'";
+                    a[i].style.color = "#5b6d02";
+                    a[i].style.fontSize = "22px";
+                    a[i].style.boxShadow = "5px 5px black";
+                }
+            }
+
+            function inc() {
+                document.getElementById('text').style.fontSize="80px";
+                let a = document.getElementsByClassName('card-right');
+                for (let i = 0; i < a.length; i++) {
+                    a[i].style.fontSize = "25px";
+                }
+            }
+
+            function dec() {
+                document.getElementById('text').style.fontSize="40px";
+                let a = document.getElementsByClassName('card-right');
+                for (let i = 0; i < a.length; i++) {
+                    a[i].style.fontSize = "15px";
+                }
+            }
+
+            function reset() {
+                document.getElementById('text').style.fontSize="45px";
+                let a = document.getElementsByClassName('card-right');
+                for (let i = 0; i < a.length; i++) {
+                    a[i].style.fontSize = "16px";
+                }
+            }
+
+        </script>
+    </head>
+    <body id="body">
+        <div class="content">
+            <div id="title" class="title">
+                <h1 id="text" class="title-title">
+                    Our Solar System
+                </h1>
+                <button type="button" onclick="normal()" class="title-button-a title-button">
+                    NORMAL MODE
+                </button>
+                <button type="button" onclick="pro()" class="title-button-a title-button">
+                    COOL MODE
+                </button>
+                <button type="button" onclick="kids()" class="title-button-a title-button">
+                    KIDS MODE
+                </button>
+                <button type="button" onclick="inc()" class="title-button-a title-button">
+                    FONT +
+                </button>
+                <button type="button" onclick="dec()" class="title-button-a title-button">
+                    FONT -
+                </button>
+                <button type="button" onclick="reset()" class="title-button-a title-button">
+                    RESET
+                </button>
+            </div>
+            <div class="card card-sun one">
+                <div class="card-left sun">
+
+                </div>
+                <div class="card-right a">
+                    <h2 class="card-title">
+                        The Sun
+                    </h2>
+                    <p class="card-text">
+                        The Sun is the star at the center of the Solar System. It is a massive, hot ball of plasma, 
+                        inflated and heated by energy produced by nuclear fusion reactions at its core. Part of this 
+                        energy is emitted from its surface as visible light, ultraviolet, and infrared radiation, 
+                        providing most of the energy for life on Earth.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card-small two">
+                <div class="card-left small mercury">
+
+                </div>
+                <div class="card-right">
+                    <h2 class="card-title">
+                        Mercury
+                    </h2>
+                    <p class="card-text">
+                        Mercury is one of four terrestrial planets in the Solar System, which means it is a rocky body like Earth.
+                        Mercury is the first planet from the Sun and the smallest in the Solar System. Mercury is classified as a 
+                        terrestrial planet, with roughly the same surface gravity as Mars.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card-small three">
+                <div class="card-left small venus">
+
+                </div>
+                <div class="card-right">
+                    <h2 class="card-title">
+                        Venus
+                    </h2>
+                    <p class="card-text">
+                        Venus is the second planet from the Sun. It is a terrestrial planet and is the closest in mass and size to 
+                        its orbital neighbour Earth. Venus is notable for having the densest atmosphere of the terrestrial planets, 
+                        composed mostly of carbon dioxide with a thick, global sulfuric acid cloud cover.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card-small four">
+                <div class="card-left small earth">
+
+                </div>
+                <div class="card-right">
+                    <h2 class="card-title">
+                        Earth
+                    </h2>
+                    <p class="card-text">
+                        Earth is the third planet from the Sun and the only astronomical object known to harbor life. 
+                        This is enabled by Earth being a water world, the only one in the Solar System sustaining liquid surface 
+                        water. Almost all of Earth's water is contained in its global ocean, covering 70.8% of Earth's crust.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card-small five">
+                <div class="card-left small mars">
+
+                </div>
+                <div class="card-right">
+                    <h2 class="card-title">
+                        Mars
+                    </h2>
+                    <p class="card-text">
+                        Mars is the fourth planet from the Sun. The surface of Mars is orange-red because it is covered in iron
+                        oxide dust, giving it the nickname "the Red Planet". Mars is among the brightest objects in Earth's sky.
+                        It is the second smallest of the Solar System's planets
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card-big six">
+                <div class="card-left big jupiter">
+
+                </div>
+                <div class="card-right">
+                    <h2 class="card-title">
+                        Jupiter
+                    </h2>
+                    <p class="card-text">
+                        Jupiter is the fifth planet from the Sun and the largest in the Solar System. A gas giant, Jupiter's mass 
+                        is more than two and a half times that of all the other planets in the Solar System combined and slightly 
+                        less than one one-thousandth the mass of the Sun.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card-big seven">
+                <div class="card-left big saturn">
+
+                </div>
+                <div class="card-right">
+                    <h2 class="card-title">
+                        Saturn
+                    </h2>
+                    <p class="card-text">
+                        Saturn is the sixth planet from the Sun and the second-largest in the Solar System, after Jupiter. It 
+                        is a gas giant with an average radius of about nine-and-a-half times that of Earth. 
+                        It has only one-eighth the average density of Earth, but is over 95 times more massive.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card-med eight">
+                <div class="card-left med uranus">
+
+                </div>
+                <div class="card-right">
+                    <h2 class="card-title">
+                        Uranus
+                    </h2>
+                    <p class="card-text">
+                        Uranus is the seventh planet from the Sun. It is a gaseous cyan-coloured ice giant. Uranus has 
+                        the third-largest diameter and fourth-largest mass among the Solar System's planets.Uranus is 
+                        visible to the naked eye, but it was never recognised as a planet by ancient observers because of its dimness and slow orbit.
+                    </p>
+                </div>
+            </div>
+
+            <div class="card card-med nine">
+                <div class="card-left med neptune">
+
+                </div>
+                <div class="card-right">
+                    <h2 class="card-title">
+                        Neptune
+                    </h2>
+                    <p class="card-text">
+                        Neptune is the eighth and farthest known planet from the Sun. It is the fourth-largest planet in 
+                        the Solar System by diameter, the third-most-massive planet, and the densest giant planet. It is 17 
+                        times the mass of Earth, and slightly more massive than fellow ice giant Uranus. Neptune is denser and 
+                        physically smaller than Uranus
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
