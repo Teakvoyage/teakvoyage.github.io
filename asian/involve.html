@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <title>
+            Involve - Asian Heritage Month
+        </title>
+        
+        <link rel="stylesheet" href="default.css">
+        <link rel="stylesheet" href="light.css" id="theme">
+
+        <script>
+            function light() {
+                document.getElementById("theme").setAttribute("href", "light.css");
+            }
+
+            function dark() {
+                document.getElementById("theme").setAttribute("href", "dark.css");
+            }
+
+            function research() {
+                document.getElementById('share').style.display="none";
+                document.getElementById('research').style.display="block";
+            }
+
+            function share() {
+                document.getElementById('research').style.display="none";
+                document.getElementById('share').style.display="block";
+            }
+        </script>
+
+    </head>
+    <body class="four">
+
+        <div class="nav">
+            <ul type="none" class="nav-ul">
+                <a href="index.html" class="nav-item-a"><li class="nav-item nav-button hover main-text"><img src="home.jpg" height="20px" width="20px" class="icon-img">Home</li></a>
+                <a href="organizations.html" class="nav-item-a"><li class="nav-item nav-button hover main-text"><img src="organizations.png" height="20px" width="20px" class="icon-img">Organizations</li></a>
+                <a href="profiles.html" class="nav-item-a"><li class="nav-item nav-button hover main-text"><img src="profiles.png" height="20px" width="20px" class="icon-img">Profiles</li></a>
+                <a href="index.html" class="nav-item-a-logo"><li class="nav-item nav-image"></li></a>
+                <a href="impact.html" class="nav-item-a"><li class="nav-item nav-button hover main-text"><img src="impact.jpg" height="20px" width="20px" class="icon-img">Impact</li></a>
+                <a href="timeline.html" class="nav-item-a"><li class="nav-item nav-button hover main-text"><img src="timeline.jpg" height="20px" width="20px" class="icon-img">Timeline</li></a>
+                <a href="involve.html" class="nav-item-a"><li class="nav-item nav-button hover main-text"><img src="involve.png" height="20px" width="20px" class="icon-img">Involve</li></a>
+            </ul>
+            <div class="theme">
+                <button type="button" class="theme-button hover four main-text" onclick="light()">LIGHT</button>
+                <button type="button" class="theme-button hover four main-text" onclick="dark()">DARK</button>
+            </div>
+        </div>
+
+        <div class="header">
+            <h1 class="header-title main-text">
+                AID AWARENESS <br> RESEARCH AND SHARING
+            </h1>   
+        </div>
+
+        <div class="selector">
+            <button class="title-button" onclick="research()">
+                CONTRIBUTE TO RESEARCH
+            </button>  
+            <button class="title-button" onclick="share()">
+                SHARE YOUR STORY
+            </button>
+        </div>
+
+        <div class="content" id="research">
+            <div class="card-one four">
+                <h1 class="card-title main-text">
+                    RESEARCH
+                </h1>
+                <hr class="divider one">
+                <p class="card-text accent-text">
+                    Help contribute to research on Asian Immigration by many ways.
+                    Visit our organizations page to support induvidual organizations
+                    that help Asian communities. Or, fill out this form to contribute 
+                    to ongoing data collections for research.
+                </p>
+            </div>
+            <div class="form">
+                <form class="form-form">
+                    <label class="input-label">Name</label><br>
+                    <div class="space">
+                        <input type="text" class="input" id="fname" name="fname">
+                        <input type="text" class="input" id="lname" name="lname"><br>
+                    </div>
+                    <div class="space a">
+                        <label class="input-label-a" for="fname">First Name</label>
+                        <label class="input-label-a" for="lname">Last Name</label><br>
+                    </div>
+                    <br><br>
+                    <label class="input-label">Your Knowledge</label><br>
+                    <div class="space">
+                        <textarea class="input-text" id="Knowledge" name="Knowledge"></textarea><br>
+                    </div>
+                    <div class="space a">
+                        <label class="input-label-a" for="Knowledge">What do you know about Asian Immigration?</label><br>
+                    </div>
+                    <br><br>
+                    <label class="input-label">Your Wishes</label><br>
+                    <div class="space">
+                        <textarea class="input-text" id="Wishes" name="Wishes"></textarea><br>
+                    </div>
+                    <div class="space a">
+                        <label class="input-label-a" for="Wishes">What do you wish to see in Asian Immigration?</label><br>
+                    </div>
+                    <br><br>
+                    <label class="input-label">Improve</label><br>
+                    <div class="space">
+                        <textarea class="input-text" id="improve" name="improve"></textarea><br>
+                    </div>
+                    <div class="space a">
+                        <label class="input-label-a" for="improve">How can Canada improve its immigration system?</label><br>
+                    </div>
+                    <br><br>
+                    <label class="input-label">Multicultural</label><br>
+                    <div class="space">
+                        <textarea class="input-text" id="multicultural" name="multicultural"></textarea><br>
+                    </div>
+                    <div class="space a">
+                        <label class="input-label-a" for="multicultural">Do you think Canada has been able to be a multicultural society?</label><br>
+                    </div>
+                    <button type="submit" class="title-button">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="content no-show" id="share">
+            <div class="card-one four">
+                <h1 class="card-title main-text">
+                    SHARE
+                </h1>
+                <hr class="divider one">
+                <p class="card-text accent-text">
+                    If you want to share your story of your family, immigration or more,
+                    you can fill you this form and we can help you spread it. Please enter 
+                    the information and we will contact you back where you can submit your
+                    story.
+                </p>
+            </div>
+            <div class="form">
+                <form class="form-form">
+                    <label class="input-label">Name</label><br>
+                    <div class="space">
+                        <input type="text" class="input" id="fname1" name="fname1">
+                        <input type="text" class="input" id="lname1" name="lname1"><br>
+                    </div>
+                    <div class="space a">
+                        <label class="input-label-a" for="fname1">First Name</label>
+                        <label class="input-label-a" for="lname1">Last Name</label><br>
+                    </div>
+                    <br><br>
+                    <label class="input-label">Email</label><br>
+                    <div class="space">
+                        <input type="email" class="input" id="email" name="email"><br>
+                    </div>
+                    <div class="space a">
+                        <label class="input-label-a" for="email">Email Address</label><br>
+                    </div>
+                    <br><br>
+                    <label class="input-label">Story Summary</label><br>
+                    <div class="space">
+                        <textarea class="input-text" id="summary" name="summary"></textarea><br>
+                    </div>
+                    <div class="space a">
+                        <label class="input-label-a" for="summary">Please give a brief summary of your story</label><br>
+                    </div>
+                    <br><br>
+                    <label class="input-label">Reason</label><br>
+                    <div class="space">
+                        <textarea class="input-text" id="reason" name="reason"></textarea><br>
+                    </div>
+                    <div class="space a">
+                        <label class="input-label-a" for="reason">Why do you want to share your story?</label><br>
+                    </div>
+                    <button type="submit" class="title-button">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer one">
+            <h1 class="timeline-title white">Asian Heritage Month</h1>
+            <p class="accent-text white">
+                    Adison Ngo | Copyright @2024 | Do Not Distribute | adison.ngo@surreyschools.ca
+            </p>
+        </div>
+
+    </body>
+</html>
