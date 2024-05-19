@@ -1,0 +1,16 @@
+.correct {
+    background-color: rgba(29, 194, 29, 0.236);
+    border: 1px solid rgba(29, 194, 29, 0.481);
+    pointer-events: none;
+}
+
+.incorrect {
+    background-color: rgba(233, 43, 43, 0.255);
+    border: 1px solid rgba(243, 53, 53, 0.347);
+    pointer-events: none;
+}
+
+.input-radio {
+    pointer-events: none;
+    filter: grayscale(1);
+}
