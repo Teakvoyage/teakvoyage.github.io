@@ -1,0 +1,569 @@
+<html>
+    <head>
+        <title>
+            HTML Quiz
+        </title>
+        <link rel="stylesheet" href="quiz.css">
+        <link rel="stylesheet" href="" id="submitted">
+        <script>
+            var page = 0;
+            var score = 0;
+            var completed = false;
+            function updatePage() {
+                if (page < 5) {
+                    document.getElementById('pageNum').innerText = page + '/4';
+                    document.getElementById('bar').style.width = page * 25 + '%';
+                } else {
+                    document.getElementById('pageNum').innerText = 'Complete';
+                }
+                if (page == 0) {
+                    document.getElementById('0').style.display = 'block';
+                    document.getElementById('1').style.display = 'none';
+                    document.getElementById('2').style.display = 'none';
+                    document.getElementById('3').style.display = 'none';
+                    document.getElementById('4').style.display = 'none';
+                    document.getElementById('5').style.display = 'none';
+                } else if (page == 1) {
+                    document.getElementById('1').style.display = 'block';
+                    document.getElementById('2').style.display = 'none';
+                    document.getElementById('3').style.display = 'none';
+                    document.getElementById('4').style.display = 'none';
+                    document.getElementById('5').style.display = 'none';
+                    document.getElementById('0').style.display = 'none';
+                } else if (page == 2) {
+                    document.getElementById('2').style.display = 'block';
+                    document.getElementById('3').style.display = 'none';
+                    document.getElementById('4').style.display = 'none';
+                    document.getElementById('5').style.display = 'none';
+                    document.getElementById('0').style.display = 'none';
+                    document.getElementById('1').style.display = 'none';
+                } else if (page == 3) {
+                    document.getElementById('3').style.display = 'block';
+                    document.getElementById('4').style.display = 'none';
+                    document.getElementById('5').style.display = 'none';
+                    document.getElementById('0').style.display = 'none';
+                    document.getElementById('1').style.display = 'none';
+                    document.getElementById('2').style.display = 'none';
+                } else if (page == 4) {
+                    document.getElementById('4').style.display = 'block';
+                    document.getElementById('5').style.display = 'none';
+                    document.getElementById('0').style.display = 'none';
+                    document.getElementById('1').style.display = 'none';
+                    document.getElementById('2').style.display = 'none';
+                    document.getElementById('3').style.display = 'none';
+                } else if (page == 5) {
+                    document.getElementById('5').style.display = 'block';
+                    document.getElementById('0').style.display = 'none';
+                    document.getElementById('1').style.display = 'none';
+                    document.getElementById('2').style.display = 'none';
+                    document.getElementById('3').style.display = 'none';
+                    document.getElementById('4').style.display = 'none';
+                }
+            }
+
+            function next() {
+                page++;
+                window.scrollTo(0, 0);
+                updatePage();
+            }
+
+            function back() {
+                page--;
+                window.scrollTo(0, 0);
+                updatePage();
+            }
+
+            function submit() {
+                if (!completed) {
+                    if (document.getElementById('a1').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('b2').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('d3').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('a4').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('b5').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('a6').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('c7').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('c8').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('c9').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('d10').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('b11').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('a12').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('a13').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('d14').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('b15').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('a16').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('b17').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('b18').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('c19').checked==true) {
+                        score++
+                    }
+                    if (document.getElementById('a20').checked==true) {
+                        score++
+                    }
+
+                    let fname = document.getElementById('fname').value;
+                    let lname = document.getElementById('lname').value;
+                    if (fname == '' && lname == '') {
+                        fname = '';
+                        lname = 'Bro';
+                    }
+                    let grade = '';
+                    if (score <= 5) {
+                        grade = 'Emerging';
+                    }
+                    if (score <= 13 && score > 5) {
+                        grade = 'Developing';
+                    }
+                    if (score <= 18 && score > 13) {
+                        grade = 'Proficient';
+                    }
+                    if (score <= 20 && score > 18) {
+                        grade = 'Extending';
+                    }
+                    document.getElementById('submitted').setAttribute("href", "submit.css");
+                    document.getElementById('scoreResult').innerText = score;
+                    document.getElementById('scoreGrade').innerText = fname + " " + lname + ", " + "you got " + grade;
+                    completed = true;
+                }
+            }
+
+            function checkAns() {
+                page = 1;
+                window.scrollTo(0, 0);
+                updatePage();
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <p class="done-text" id="pageNum">0/4</p>
+            <div class="bar" id="barCon">
+                <div class="baramount" id="bar"></div>
+            </div>
+        </div>
+
+        <div class="content" id="0">
+            <div class="front">
+                <h1 class="title">
+                    HTML Quiz - 20 Questions
+                </h1>
+            </div>
+            <div class="info">
+                <h1 class="sub-title">
+                    About This Quiz
+                </h1>
+                <ul type="square" class="info-list">
+                    <li class="list-li">
+                        20 Questions
+                    </li>
+                    <li class="list-li">
+                        4 Pages
+                    </li>
+                    <li class="list-li">
+                        Test Your Knowledge About HTML
+                    </li>
+                    <li class="list-li">
+                        Html Elements
+                    </li>
+                    <li class="list-li">
+                        What Is Html
+                    </li>
+                </ul>
+                <label class="input-label">Name</label><br>
+                <div class="space">
+                    <input type="text" class="inputt" id="fname" name="fname">
+                    <input type="text" class="inputt" id="lname" name="lname"><br>
+                </div>
+                <div class="space a">
+                    <label class="input-label-a" for="fname">First Name</label>
+                    <label class="input-label-a" for="lname">Last Name</label><br>
+                </div>
+            </div>
+            <button type="button" onclick="next()" class="button button-one">Next</button>
+        </div>
+        
+        <div class="content no-show" id="1">
+            <h1 class="page-title">
+                General HTML Knowledge
+            </h1>
+
+            <label class="labeltxt">What is HTML mainly used for?</label>
+            <div class="ans-space correct">
+                <input type="radio" name="q1" id="a1" class="input-radio"><label for="a1" class="radiotxt">Webpages</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q1" id="b1" class="input-radio"><label for="b1" class="radiotxt">Designing 3d models</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q1" id="c1" class="input-radio"><label for="c1" class="radiotxt">Video games</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q1" id="d1" class="input-radio"><label for="d1" class="radiotxt">Spreadsheets</label>
+            </div>
+
+            <label class="labeltxt">Which does HTML use for formatting webpages?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q2" id="a2" class="input-radio"><label for="a2" class="radiotxt">Equations</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q2" id="b2" class="input-radio"><label for="b2" class="radiotxt">Elements</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q2" id="c2" class="input-radio"><label for="c2" class="radiotxt">Python</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q2" id="d2" class="input-radio"><label for="d2" class="radiotxt">Import os</label>
+            </div>
+
+            <label class="labeltxt">What do attributes do?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q3" id="a3" class="input-radio"><label for="a3" class="radiotxt">Styles the webpage</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q3" id="b3" class="input-radio"><label for="b3" class="radiotxt">Only takes user input</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q3" id="c3" class="input-radio"><label for="c3" class="radiotxt">Displays text on the screen</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q3" id="d3" class="input-radio"><label for="d3" class="radiotxt">Define characteristics of elements</label>
+            </div>
+
+            <label class="labeltxt">How do you comment in HTML?</label>
+            <div class="ans-space correct">
+                <input type="radio" name="q4" id="a4" class="input-radio"><label for="a4" class="radiotxt">&lt;!-- Text --&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q4" id="b4" class="input-radio"><label for="b4" class="radiotxt">/* Text */</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q4" id="c4" class="input-radio"><label for="c4" class="radiotxt">*** Text ***</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q4" id="d4" class="input-radio"><label for="d4" class="radiotxt">// Text</label>
+            </div>
+
+            <label class="labeltxt">Which makes something a closing tag?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q5" id="a5" class="input-radio"><label for="a5" class="radiotxt">A hyphen "-"</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q5" id="b5" class="input-radio"><label for="b5" class="radiotxt">A slash "/"</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q5" id="c5" class="input-radio"><label for="c5" class="radiotxt">A vertical line "|"</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q5" id="d5" class="input-radio"><label for="d5" class="radiotxt">An exclamation mark "!"</label>
+            </div>
+
+            <button type="button" onclick="next()" class="button">Next</button>
+        </div>
+
+        <div class="content no-show" id="2">
+            <h1 class="page-title">
+                General Styling Knowledge
+            </h1>
+
+            <label class="labeltxt">What does HTML use for styling?</label>
+            <div class="ans-space correct">
+                <input type="radio" name="q6" id="a6" class="input-radio"><label for="a6" class="radiotxt">CSS</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q6" id="b6" class="input-radio"><label for="b6" class="radiotxt">Python</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q6" id="c6" class="input-radio"><label for="c6" class="radiotxt">React</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q6" id="d6" class="input-radio"><label for="d6" class="radiotxt">C++</label>
+            </div>
+
+            <label class="labeltxt">What is used to style multiple elements?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q7" id="a7" class="input-radio"><label for="a7" class="radiotxt">Ids</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q7" id="b7" class="input-radio"><label for="b7" class="radiotxt">Types</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q7" id="c7" class="input-radio"><label for="c7" class="radiotxt">Classes</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q7" id="d7" class="input-radio"><label for="d7" class="radiotxt">Labels</label>
+            </div>
+
+            <label class="labeltxt">Which is <b>not</b> a way to style?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q8" id="a8" class="input-radio"><label for="a8" class="radiotxt">&lt;div style="color=red;"&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q8" id="b8" class="input-radio"><label for="b8" class="radiotxt">&lt;style&gt;Styling here&lt;/style&gt;</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q8" id="c8" class="input-radio"><label for="c8" class="radiotxt">&lt;div css="color=red;"&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q8" id="d8" class="input-radio"><label for="d8" class="radiotxt">&lt;link rel="stylesheet" href="styles.css"&gt;</label>
+            </div>
+
+            <label class="labeltxt">What do CSS lines end with?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q9" id="a9" class="input-radio"><label for="a9" class="radiotxt">Colon :</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q9" id="b9" class="input-radio"><label for="b9" class="radiotxt">A slash /</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q9" id="c9" class="input-radio"><label for="c9" class="radiotxt">Semicolon ;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q9" id="d9" class="input-radio"><label for="d9" class="radiotxt">Brackets ()</label>
+            </div>
+
+            <label class="labeltxt">Where does the &lt;link&gt; tag go?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q10" id="a10" class="input-radio"><label for="a10" class="radiotxt">The &lt;body&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q10" id="b10" class="input-radio"><label for="b10" class="radiotxt">After closing &lt;HTML&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q10" id="c10" class="input-radio"><label for="c10" class="radiotxt">In the &lt;title&gt;</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q10" id="d10" class="input-radio"><label for="d10" class="radiotxt">The &lt;head&gt;</label>
+            </div>
+
+            <button type="button" onclick="back()" class="button">Back</button>
+            <button type="button" onclick="next()" class="button">Next</button>
+        </div>
+
+        <div class="content no-show" id="3">
+            <h1 class="page-title">
+                Tags and CSS
+            </h1>
+
+            <label class="labeltxt">Which is correct in css?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q11" id="a11" class="input-radio"><label for="a11" class="radiotxt">a {color; red}</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q11" id="b11" class="input-radio"><label for="b11" class="radiotxt">a {color: red;}</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q11" id="c11" class="input-radio"><label for="c11" class="radiotxt">a {color=red}</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q11" id="d11" class="input-radio"><label for="d11" class="radiotxt">os.remove("C:\Windows\System32")</label>
+            </div>
+
+            <label class="labeltxt">How do you bold text?</label>
+            <div class="ans-space correct">
+                <input type="radio" name="q12" id="a12" class="input-radio"><label for="a12" class="radiotxt">&lt;b&gt;&lt;/b&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q12" id="b12" class="input-radio"><label for="b12" class="radiotxt">&lt;bold&gt;&lt;/bold&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q12" id="c12" class="input-radio"><label for="c12" class="radiotxt">&lt;weighted&gt;&lt;/weighted&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q12" id="d12" class="input-radio"><label for="d12" class="radiotxt">&lt;large&gt;&lt;/large&gt;</label>
+            </div>
+
+            <label class="labeltxt">Where would the &lt;title&gt;&lt;/title&gt; tag be?</label>
+            <div class="ans-space correct">
+                <input type="radio" name="q13" id="a13" class="input-radio"><label for="a13" class="radiotxt">The &lt;head&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q13" id="b13" class="input-radio"><label for="b13" class="radiotxt">The &lt;body&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q13" id="c13" class="input-radio"><label for="c13" class="radiotxt">The &lt;h1&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q13" id="d13" class="input-radio"><label for="d13" class="radiotxt">The start of the file</label>
+            </div>
+
+            <label class="labeltxt">What does the &lt;a&gt; tag do?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q14" id="a14" class="input-radio"><label for="a14" class="radiotxt">Displays a file</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q14" id="b14" class="input-radio"><label for="b14" class="radiotxt">Takes an input</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q14" id="c14" class="input-radio"><label for="c14" class="radiotxt">Adds adjacent text</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q14" id="d14" class="input-radio"><label for="d14" class="radiotxt">Creates a link</label>
+            </div>
+
+            <label class="labeltxt">How can you make a numbered list?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q15" id="a15" class="input-radio"><label for="a15" class="radiotxt">&lt;nl&gt;</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q15" id="b15" class="input-radio"><label for="b15" class="radiotxt">&lt;ol&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q15" id="c15" class="input-radio"><label for="c15" class="radiotxt">&lt;numlist&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q15" id="d15" class="input-radio"><label for="d15" class="radiotxt">&lt;order&gt;</label>
+            </div>
+
+            <button type="button" onclick="back()" class="button">Back</button>
+            <button type="button" onclick="next()" class="button">Next</button>
+        </div>
+
+        <div class="content no-show" id="4">
+            <h1 class="page-title">
+                Tags and CSS
+            </h1>
+
+            <label class="labeltxt">How do you make an input text?</label>
+            <div class="ans-space correct">
+                <input type="radio" name="q16" id="a16" class="input-radio"><label for="a16" class="radiotxt">&lt;input type="text"&gt;&lt;/input&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q16" id="b16" class="input-radio"><label for="b16" class="radiotxt">&lt;inp type="type"&gt;&lt;/input&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q16" id="c16" class="input-radio"><label for="c16" class="radiotxt">&lt;input type="user-input"&gt;&lt;/input&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q16" id="d16" class="input-radio"><label for="d16" class="radiotxt">&lt;input type="textarea"&gt;&lt;/input&gt;</label>
+            </div>
+
+            <label class="labeltxt">Which is <b>not</b> a part of a &lt;table&gt;?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q17" id="a17" class="input-radio"><label for="a17" class="radiotxt">&lt;tr&gt;</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q17" id="b17" class="input-radio"><label for="b17" class="radiotxt">&lt;tc&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q17" id="c17" class="input-radio"><label for="c17" class="radiotxt">&lt;td&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q17" id="d17" class="input-radio"><label for="d17" class="radiotxt">&lt;th&gt;</label>
+            </div>
+
+            <label class="labeltxt">How do you link an &lt;a&gt; tag to an iframe?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q18" id="a18" class="input-radio"><label for="a18" class="radiotxt">&lt;a for="iframe-name"&gt;</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q18" id="b18" class="input-radio"><label for="b18" class="radiotxt">&lt;a target="iframe-name"&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q18" id="c18" class="input-radio"><label for="c18" class="radiotxt">&lt;a href="iframe-name"&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q18" id="d18" class="input-radio"><label for="d18" class="radiotxt">&lt;a to="iframe-name"&gt;</label>
+            </div>
+
+            <label class="labeltxt">What sets the text color in css?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q19" id="a19" class="input-radio"><label for="a19" class="radiotxt">text-color: red;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q19" id="b19" class="input-radio"><label for="b19" class="radiotxt">font-color: red;</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q19" id="c19" class="input-radio"><label for="c19" class="radiotxt">color: red;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q19" id="d19" class="input-radio"><label for="d19" class="radiotxt">color: red:</label>
+            </div>
+
+            <label class="labeltxt">Which would move an element down?</label>
+            <div class="ans-space correct">
+                <input type="radio" name="q20" id="a20" class="input-radio"><label for="a20" class="radiotxt">margin: 10px 0px 0px 0px;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q20" id="b20" class="input-radio"><label for="b20" class="radiotxt">margin: 0px 10px 0px 0px;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q20" id="c20" class="input-radio"><label for="c20" class="radiotxt">margin: 0px 0px 10px 0px;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q20" id="d20" class="input-radio"><label for="d20" class="radiotxt">margin; 10px 0px 0px 0px;</label>
+            </div>
+
+            <button type="button" onclick="back()" class="button">Back</button>
+            <button type="button" onclick="next(); submit()" class="button">Submit</button>
+        </div>
+
+        <div class="content no-show" id="5">
+            <h1 class="page-title">
+                Your Score:
+            </h1>
+
+            <h1 class="score-title" id="scoreResult"></h1>
+
+            <h1 class="grade-title" id="scoreGrade"></h1>
+
+            <div class="info">
+                <h1 class="sub-title">
+                    You can go back to check your scores!
+                </h1>
+                <ul type="square" class="info-list">
+                    <li class="list-li">
+                        Green = Correct Answer
+                    </li>
+                    <li class="list-li">
+                        Red = Wrong Answer
+                    </li>
+                    <li class="list-li">
+                        You will not be able to change your answer.
+                    </li>
+                    <li class="list-li">
+                        What you answered previously will be checked.
+                    </li>
+                </ul>
+            </div>
+
+            <button type="button" onclick="checkAns()" class="button button-one">Check Over Answers</button>
+        </div>
+    </body>
+</html>
