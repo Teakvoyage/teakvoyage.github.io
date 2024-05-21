@@ -8,11 +8,12 @@
         <script>
             var page = 0;
             var score = 0;
+            var escore = 0;
             var completed = false;
             function updatePage() {
-                if (page < 5) {
-                    document.getElementById('pageNum').innerText = page + '/4';
-                    document.getElementById('bar').style.width = page * 25 + '%';
+                if (page < 7) {
+                    document.getElementById('pageNum').innerText = page + '/6';
+                    document.getElementById('bar').style.width = page * 1 / 6 * 100 + '%';
                 } else {
                     document.getElementById('pageNum').innerText = 'Complete';
                 }
@@ -23,6 +24,8 @@
                     document.getElementById('3').style.display = 'none';
                     document.getElementById('4').style.display = 'none';
                     document.getElementById('5').style.display = 'none';
+                    document.getElementById('6').style.display = 'none';
+                    document.getElementById('7').style.display = 'none';
                 } else if (page == 1) {
                     document.getElementById('1').style.display = 'block';
                     document.getElementById('2').style.display = 'none';
@@ -30,6 +33,8 @@
                     document.getElementById('4').style.display = 'none';
                     document.getElementById('5').style.display = 'none';
                     document.getElementById('0').style.display = 'none';
+                    document.getElementById('6').style.display = 'none';
+                    document.getElementById('7').style.display = 'none';
                 } else if (page == 2) {
                     document.getElementById('2').style.display = 'block';
                     document.getElementById('3').style.display = 'none';
@@ -37,6 +42,8 @@
                     document.getElementById('5').style.display = 'none';
                     document.getElementById('0').style.display = 'none';
                     document.getElementById('1').style.display = 'none';
+                    document.getElementById('6').style.display = 'none';
+                    document.getElementById('7').style.display = 'none';
                 } else if (page == 3) {
                     document.getElementById('3').style.display = 'block';
                     document.getElementById('4').style.display = 'none';
@@ -44,6 +51,8 @@
                     document.getElementById('0').style.display = 'none';
                     document.getElementById('1').style.display = 'none';
                     document.getElementById('2').style.display = 'none';
+                    document.getElementById('6').style.display = 'none';
+                    document.getElementById('7').style.display = 'none';
                 } else if (page == 4) {
                     document.getElementById('4').style.display = 'block';
                     document.getElementById('5').style.display = 'none';
@@ -51,8 +60,30 @@
                     document.getElementById('1').style.display = 'none';
                     document.getElementById('2').style.display = 'none';
                     document.getElementById('3').style.display = 'none';
+                    document.getElementById('6').style.display = 'none';
+                    document.getElementById('7').style.display = 'none';
                 } else if (page == 5) {
                     document.getElementById('5').style.display = 'block';
+                    document.getElementById('0').style.display = 'none';
+                    document.getElementById('1').style.display = 'none';
+                    document.getElementById('2').style.display = 'none';
+                    document.getElementById('3').style.display = 'none';
+                    document.getElementById('4').style.display = 'none';
+                    document.getElementById('6').style.display = 'none';
+                    document.getElementById('7').style.display = 'none';
+                } else if (page == 6) {
+                    document.getElementById('6').style.display = 'block';
+                    document.getElementById('5').style.display = 'none';
+                    document.getElementById('0').style.display = 'none';
+                    document.getElementById('1').style.display = 'none';
+                    document.getElementById('2').style.display = 'none';
+                    document.getElementById('3').style.display = 'none';
+                    document.getElementById('4').style.display = 'none';
+                    document.getElementById('7').style.display = 'none';
+                } else if (page == 7) {
+                    document.getElementById('7').style.display = 'block';
+                    document.getElementById('6').style.display = 'none';
+                    document.getElementById('5').style.display = 'none';
                     document.getElementById('0').style.display = 'none';
                     document.getElementById('1').style.display = 'none';
                     document.getElementById('2').style.display = 'none';
@@ -135,6 +166,36 @@
                     if (document.getElementById('a20').checked==true) {
                         score++
                     }
+                    if (document.getElementById('b21').checked==true) {
+                        escore++
+                    }
+                    if (document.getElementById('d22').checked==true) {
+                        escore++
+                    }
+                    if (document.getElementById('c23').checked==true) {
+                        escore++
+                    }
+                    if (document.getElementById('c24').checked==true) {
+                        escore++
+                    }
+                    if (document.getElementById('d25').checked==true) {
+                        escore++
+                    }
+                    if (document.getElementById('a26').checked==true) {
+                        escore++
+                    }
+                    if (document.getElementById('c27').checked==true) {
+                        escore++
+                    }
+                    if (document.getElementById('d28').checked==true) {
+                        escore++
+                    }
+                    if (document.getElementById('a29').checked==true) {
+                        escore++
+                    }
+                    if (document.getElementById('b30').checked==true) {
+                        escore++
+                    }
 
                     let fname = document.getElementById('fname').value;
                     let lname = document.getElementById('lname').value;
@@ -143,20 +204,23 @@
                         lname = 'Bro';
                     }
                     let grade = '';
-                    if (score <= 5) {
+                    let gradeScore = score + escore;
+                    if (gradeScore <= 7) {
                         grade = 'Emerging';
                     }
-                    if (score <= 13 && score > 5) {
+                    if (gradeScore <= 14 && gradeScore > 7) {
                         grade = 'Developing';
                     }
-                    if (score <= 18 && score > 13) {
+                    if (gradeScore <= 22 && gradeScore > 14) {
                         grade = 'Proficient';
                     }
-                    if (score <= 20 && score > 18) {
+                    if (gradeScore > 22) {
                         grade = 'Extending';
                     }
                     document.getElementById('submitted').setAttribute("href", "submit.css");
-                    document.getElementById('scoreResult').innerText = score;
+                    document.getElementById('scoreResult').innerText = score + escore + "/30";
+                    document.getElementById('scoreOne').innerHTML = "Your Score on Normal Questions: " + "<b>" + score + "/20" + "</b>";
+                    document.getElementById('scoreTwo').innerHTML = "Your Score on Extending Questions: " + "<b>" + escore + "/10" + "</b>";
                     document.getElementById('scoreGrade').innerText = fname + " " + lname + ", " + "you got " + grade;
                     completed = true;
                 }
@@ -173,7 +237,7 @@
     </head>
     <body>
         <div class="header">
-            <p class="done-text" id="pageNum">0/4</p>
+            <p class="done-text" id="pageNum">0/6</p>
             <div class="bar" id="barCon">
                 <div class="baramount" id="bar"></div>
             </div>
@@ -182,7 +246,7 @@
         <div class="content" id="0">
             <div class="front">
                 <h1 class="title">
-                    HTML Quiz - 20 Questions
+                    HTML Quiz - 30 Questions
                 </h1>
             </div>
             <div class="info">
@@ -191,10 +255,10 @@
                 </h1>
                 <ul type="square" class="info-list">
                     <li class="list-li">
-                        20 Questions
+                        20 Questions + 10 Extending Questions
                     </li>
                     <li class="list-li">
-                        4 Pages
+                        6 Pages
                     </li>
                     <li class="list-li">
                         Test Your Knowledge About HTML
@@ -531,10 +595,168 @@
             </div>
 
             <button type="button" onclick="back()" class="button">Back</button>
-            <button type="button" onclick="next(); submit()" class="button">Submit</button>
+            <button type="button" onclick="next()" class="button">Next</button>
         </div>
 
         <div class="content no-show" id="5">
+            <h1 class="page-title">
+                Extending
+            </h1>
+
+            <label class="labeltxt">How do your center a div horizontally?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q21" id="a21" class="input-radio"><label for="a21" class="radiotxt">Padding auto on the right and left</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q21" id="b21" class="input-radio"><label for="b21" class="radiotxt">Margin auto on the right and left</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q21" id="c21" class="input-radio"><label for="c21" class="radiotxt">Margin auto on the top and bottom</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q21" id="d21" class="input-radio"><label for="d21" class="radiotxt">Padding auto on the top and bottom</label>
+            </div>
+
+            <label class="labeltxt">A &lt;h1&gt; tag is the direct child of &lt;body&gt;, what is its width?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q22" id="a22" class="input-radio"><label for="a22" class="radiotxt">The width of all its text content</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q22" id="b22" class="input-radio"><label for="b22" class="radiotxt">It has no width</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q22" id="c22" class="input-radio"><label for="c22" class="radiotxt">Half of the screen size</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q22" id="d22" class="input-radio"><label for="d22" class="radiotxt">The body's width</label>
+            </div>
+
+            <label class="labeltxt">What would display with an empty div with no styling?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q23" id="a23" class="input-radio"><label for="a23" class="radiotxt">A grey box where the div is</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q23" id="b23" class="input-radio"><label for="b23" class="radiotxt">The div's border</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q23" id="c23" class="input-radio"><label for="c23" class="radiotxt">Nothng at all</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q23" id="d23" class="input-radio"><label for="d23" class="radiotxt">Text that says div</label>
+            </div>
+
+            <label class="labeltxt">If an element is 100px wide with {padding: 10px}, how much horizontal space does it take up?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q24" id="a24" class="input-radio"><label for="a24" class="radiotxt">110px</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q24" id="b24" class="input-radio"><label for="b24" class="radiotxt">100px</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q24" id="c24" class="input-radio"><label for="c24" class="radiotxt">120px</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q24" id="d24" class="input-radio"><label for="d24" class="radiotxt">140px</label>
+            </div>
+
+            <label class="labeltxt">if two block level elements are 100px tall and wide, what is the total height they occupy?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q25" id="a25" class="input-radio"><label for="a25" class="radiotxt">100px</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q25" id="b25" class="input-radio"><label for="b25" class="radiotxt">0px</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q25" id="c25" class="input-radio"><label for="c25" class="radiotxt">50px</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q25" id="d25" class="input-radio"><label for="d25" class="radiotxt">200px</label>
+            </div>
+
+            <button type="button" onclick="back()" class="button">Back</button>
+            <button type="button" onclick="next()" class="button">Next</button>
+        </div>
+
+        <div class="content no-show" id="6">
+            <h1 class="page-title">
+                Extending
+            </h1>
+
+            <label class="labeltxt">Which CSS property displays inside an element?</label>
+            <div class="ans-space correct">
+                <input type="radio" name="q26" id="a26" class="input-radio"><label for="a26" class="radiotxt">Padding</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q26" id="b26" class="input-radio"><label for="b26" class="radiotxt">Margin</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q26" id="c26" class="input-radio"><label for="c26" class="radiotxt">Float</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q26" id="d26" class="input-radio"><label for="d26" class="radiotxt">Outline</label>
+            </div>
+
+            <label class="labeltxt">Which is inside a table with two rows and 3 columns?</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q27" id="a27" class="input-radio"><label for="a27" class="radiotxt">&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;<br>&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;&lt;/tr&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q27" id="b27" class="input-radio"><label for="b27" class="radiotxt">&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q27" id="c27" class="input-radio"><label for="c27" class="radiotxt">&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;<br>&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q27" id="d27" class="input-radio"><label for="d27" class="radiotxt">&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;<br>&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;<br>&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;</label>
+            </div>
+
+            <label class="labeltxt">If a element1 is a child of element2, what will be drawn on top? </label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q28" id="a28" class="input-radio"><label for="a28" class="radiotxt">Both will not display</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q28" id="b28" class="input-radio"><label for="b28" class="radiotxt">They will be side by side</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q28" id="c28" class="input-radio"><label for="c28" class="radiotxt">Element2 on top of element1</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q28" id="d28" class="input-radio"><label for="d28" class="radiotxt">Element1 on top of element2</label>
+            </div>
+
+            <label class="labeltxt">Which will align an element to the right?</label>
+            <div class="ans-space correct">
+                <input type="radio" name="q29" id="a29" class="input-radio"><label for="a29" class="radiotxt">float: right;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q29" id="b29" class="input-radio"><label for="b29" class="radiotxt">align: right;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q29" id="c29" class="input-radio"><label for="c29" class="radiotxt">display: block; justify-content: flex-end;</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q29" id="d29" class="input-radio"><label for="d29" class="radiotxt">position: right;</label>
+            </div>
+
+            <label class="labeltxt">Order the padding, margin, border, content from the innermost to outmost of an element</label>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q30" id="a30" class="input-radio"><label for="a30" class="radiotxt">padding, margin, border, content</label>
+            </div>
+            <div class="ans-space correct">
+                <input type="radio" name="q30" id="b30" class="input-radio"><label for="b30" class="radiotxt">content, padding, border, margin</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q30" id="c30" class="input-radio"><label for="c30" class="radiotxt">content, border, padding, margin</label>
+            </div>
+            <div class="ans-space incorrect">
+                <input type="radio" name="q30" id="d30" class="input-radio"><label for="d30" class="radiotxt">padding, content, border, margin</label>
+            </div>
+
+            <button type="button" onclick="back()" class="button">Back</button>
+            <button type="button" onclick="next(); submit()" class="button">Submit</button>
+        </div>
+
+        <div class="content no-show" id="7">
             <h1 class="page-title">
                 Your Score:
             </h1>
@@ -542,6 +764,18 @@
             <h1 class="score-title" id="scoreResult"></h1>
 
             <h1 class="grade-title" id="scoreGrade"></h1>
+
+            <div class="info">
+                <h1 class="sub-title">
+                    Score Breakdown:
+                </h1>
+                <ul type="square" class="info-list">
+                    <li class="list-li" id="scoreOne">
+                    </li>
+                    <li class="list-li" id="scoreTwo">
+                    </li>
+                </ul>
+            </div>
 
             <div class="info">
                 <h1 class="sub-title">
