@@ -1,0 +1,452 @@
+<html>
+    <head>
+        <title>
+            Madlibs - For Children
+        </title>
+        <style>
+                        
+            /* General Styling ------------------------------------------------------------------- */
+
+            body {
+                margin: 0px;
+                padding: 0px;
+                background-color: rgb(255, 255, 255);
+                font-family: Tahoma;
+            }
+
+            .no-show {
+                display: none;
+            }
+
+
+            /* Header ------------------------------------------------------------------- */
+
+            .header {
+                height: 8%;
+                width: 100%;
+                background-color: #003C43;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+
+            .title {
+                text-align: center;
+                font-size: 40px;
+                margin: 0px;
+                color: white;
+            }
+
+
+
+
+            /* Nav ------------------------------------------------------------------- */
+
+            .nav {
+                height: 92%;
+                width: 15%;
+                float: left;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: start;
+                background-color: #135D66;
+                box-shadow: inset 5px 5px 5px 0px rgba(0, 0, 0, 0.159);
+            }
+
+            .nav-title {
+                text-align: center;
+                font-size: 30px;
+                margin: 25px 0px 20px 0px;
+                color: white;
+            }
+
+            .button {
+                height: auto;
+                width: 70%;
+                padding: 10px 0px 8px 0px;
+                margin: 10px auto;
+                font-size: 20px;
+                border: 0px;
+                border-radius: 7px;
+                color: white;
+                transition: 0.2s;
+                background-image: linear-gradient(to bottom right, #afd6cd, #7dbab3);
+            }
+
+            .button:hover {
+                scale: 1.05;
+                filter: brightness(105%);
+            }
+
+
+
+
+
+            /* Content ------------------------------------------------------------------- */
+
+            .content {
+                height: 92%;
+                width: 85%;
+                float: right;
+            }
+
+            .story {
+                height: 100%;
+                width: 100%;
+            }
+
+            .input-page {
+                height: 100%;
+                width: 50%;
+                background-color: #77B0AA;
+                float: left;
+                overflow: scroll;
+                scrollbar-width: none;
+                box-shadow: inset 5px 5px 5px 0px rgba(0, 0, 0, 0.159);
+            }
+
+            .story-page {
+                height: 100%;
+                width: 50%;
+                background-color: #E3FEF7;
+                float: right;
+                box-shadow: inset 5px 5px 5px 0px rgba(0, 0, 0, 0.159);
+            }
+
+            .page-title {
+                height: auto;
+                width: 100%;
+                font-size: 35px;
+                text-align: center;
+            }
+
+            .input-form {
+                height: auto;
+                width: 75%;
+                margin: 35px auto 0px auto;
+            }
+
+            .inputtxt {
+                height: 35px;
+                width: 35%;
+                padding: 0px 15px;
+                border: 1px solid black;
+                border-radius: 5px;
+                font-size: 18px;
+                margin: 0px;
+                box-shadow: -3px 3px 0px 0px black;
+                transition: 0.2s;
+            }
+
+            .inputtxt:hover {
+                background-color: rgb(243, 243, 243);
+                scale: 1.05;
+            }
+
+            .labeltxt {
+                float: left;
+                height: 35px;
+                width: 65%;
+                font-size: 18px;
+                padding: 0px 0px 0px 10px;
+                text-align: justify;
+                line-height: 35px;
+                box-sizing: border-box;
+                border-radius: 5px;
+                color: black;
+            }
+
+            .button-submit {
+                height: 40px;
+                width: 100%;
+                font-size: 20px;
+                margin: 50px 0px 0px 0px;
+                border-radius: 7px;
+                border: 0px;
+                color: white;
+                background-image: linear-gradient(to bottom right, #d7f6ee, #87c8c0);
+                box-shadow: -3px 3px 5px 0px rgba(0, 0, 0, 0.147);
+                transition: 0.2s;
+            }
+
+            .button-submit:hover {
+                scale: 1.05;
+                filter: brightness(105%);
+                box-shadow: -6px 6px 5px 0px rgba(0, 0, 0, 0.147);
+            }
+
+            .story-text {
+                height: auto;
+                width: 70%;
+                margin: 20px auto;
+                font-size: 25px;
+            }
+
+            .colored {
+                background-color: white;
+                height: fit-content;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                box-shadow: -5px 5px 0px 0px rgba(0, 0, 0, 0.185);
+            }
+        </style>
+        <script>
+            function pageOne() {
+                document.getElementById("1").style.display = "block";
+                document.getElementById("2").style.display = "none";
+                document.getElementById("3").style.display = "none";
+            }
+
+            function pageTwo() {
+                document.getElementById("1").style.display = "none";
+                document.getElementById("2").style.display = "block";
+                document.getElementById("3").style.display = "none";
+            }
+
+            function pageThree() {
+                document.getElementById("1").style.display = "none";
+                document.getElementById("2").style.display = "none";
+                document.getElementById("3").style.display = "block";
+            }
+
+            function firstUpper(string) {
+                return string.charAt(0).toUpperCase() + string.slice(1);
+            }
+
+            function submitOne() {
+                let story = "";
+                let a = document.getElementById('a1').value.toLowerCase();
+                let b = document.getElementById('a2').value.toLowerCase();
+                let c = document.getElementById('a3').value.toLowerCase();
+                let d = document.getElementById('a4').value.toLowerCase();
+                let e = document.getElementById('a5').value.toLowerCase();
+                let f = document.getElementById('a6').value.toLowerCase();
+                let g = document.getElementById('a7').value.toLowerCase();
+                let h = document.getElementById('a8').value.toLowerCase();
+                document.getElementById('displayTitleOne').innerText = "Adison at the Bookstore";
+                document.getElementById('displayOne').innerHTML = story.concat("One day, I went to the bookstore to research for a school project about ", a, ". The bookstore was ", b, " with many ", c, "  inside. The ", d, " ",c, " were ", e, "  around everywhere. Then, one of the ", c, " grabbed a ", f, "  book off the shelves and came to me. After I took it and wiped the ", g, "  stains off it, I saw that it was about ", a, ". I quickly put the book in my ", h,  " after checking it out and thanked the ", c, ".");
+            }
+
+            function submitTwo() {
+                let story = "";
+                let a = firstUpper(document.getElementById('b1').value.toLowerCase());
+                let b = firstUpper(document.getElementById('b2').value.toLowerCase());
+                let c = document.getElementById('b3').value.toLowerCase();
+                let d = document.getElementById('b4').value.toLowerCase();
+                let e = document.getElementById('b5').value.toLowerCase();
+                let f = document.getElementById('b6').value.toLowerCase();
+                let g = firstUpper(document.getElementById('b7').value.toLowerCase());
+                let h = firstUpper(document.getElementById('b8').value.toLowerCase());
+                document.getElementById('displayTitleTwo').innerText = "Adison's Spaceship Mission";
+                document.getElementById('displayTwo').innerHTML = story.concat("I was travelling through the distant solar system called the ", a, " ", b, " in my spaceship. I made sure to remember my mission to get rid of the evil ", c, " that made its hideout here. As I approached the hideout in the ", d, " planet, I felt ", e, ". The ", c, " had set up defensive turrets that launched ", f, " at my ship. My friend named ", g, ' helped me from their own ship and we swiftly went towards the hideout. He stated, "', h, '," and we arrested the bad guy.');
+            }
+
+            function submitThree() {
+                let story = "";
+                let a = firstUpper(document.getElementById('c1').value.toLowerCase());
+                let b = document.getElementById('c2').value.toLowerCase();
+                let c = document.getElementById('c3').value.toLowerCase();
+                let d = document.getElementById('c4').value.toLowerCase();
+                let e = document.getElementById('c5').value.toLowerCase();
+                let f = document.getElementById('c6').value.toLowerCase();
+                let g = document.getElementById('c7').value.toLowerCase();
+                let h = document.getElementById('c8').value.toLowerCase();
+                document.getElementById('displayTitleThree').innerText = "Adison's Adventure in a Forest";
+                document.getElementById('displayThree').innerHTML = story.concat("I went on a walk in a forest near ", a, " to ", b, " alone. As I walked further and further into the ", c, " ", d, " forest, the few rays of light shining through became fewer. I was starting to feel ", e, ", then out of nowhere, I heard ", f, " up ahead. I ran towards the faint sound of the ", f, " which grew louder and louder. I emerged on the other side of the forest and saw a bright ", d, " world appear. After seeing the magical world with ", g, " ", h, " everywhere, I decided to keep this place to myself.");
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+
+        </script>
+        <div class="header">
+            <h1 class="title">Madlibs</h1>
+        </div>
+        <div class="nav">
+            <h2 class="nav-title">Pick A Story</h2>
+            <button class="button" onclick="pageOne()">Bookstore</button>
+            <button class="button" onclick="pageTwo()">Space</button>
+            <button class="button" onclick="pageThree()">Forest</button>
+        </div>
+        <div class="content">
+            <div class="story" id="1">
+                <div class="input-page">
+                    <h2 class="page-title" style="color: white;">
+                        A Story About A Bookstore
+                    </h2>
+                    <form class="input-form">
+                        <div class="colored">
+                            <label class="labeltxt" for="">Noun (plural):</label>
+                            <input type="text" class="inputtxt" id="a1">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Adjective:</label>
+                            <input type="text" class="inputtxt" id="a2">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Animal (plural):</label>
+                            <input type="text" class="inputtxt" id="a3">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Adjective:</label>
+                            <input type="text" class="inputtxt" id="a4">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Verb (ending with ing):</label>
+                            <input type="text" class="inputtxt" id="a5">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Color:</label>
+                            <input type="text" class="inputtxt" id="a6">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Food:</label>
+                            <input type="text" class="inputtxt" id="a7">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Something you use to carry stuff:</label>
+                            <input type="text" class="inputtxt" id="a8">
+                        </div>
+                            
+                        <input type="button" onclick="submitOne()" value="Submit" class="button-submit">
+                    </form>
+                </div>
+                <div class="story-page">
+                    <h2 class="page-title" id="displayTitleOne">
+                        The Story Will Display Here
+                    </h2>
+                    <p class="story-text" id="displayOne">
+
+                    </p>
+                </div>
+            </div>
+            <div class="story no-show" id="2">
+                <div class="input-page">
+                    <h2 class="page-title" style="color: white;">
+                        A Story About A Space Mission
+                    </h2>
+                    <form class="input-form">
+                        <div class="colored">
+                            <label class="labeltxt" for="">Color:</label>
+                            <input type="text" class="inputtxt" id="b1">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Noun:</label>
+                            <input type="text" class="inputtxt" id="b2">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Animal (singular):</label>
+                            <input type="text" class="inputtxt" id="b3">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Adjective:</label>
+                            <input type="text" class="inputtxt" id="b4">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Feeling:</label>
+                            <input type="text" class="inputtxt" id="b5">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Food (plural):</label>
+                            <input type="text" class="inputtxt" id="b6">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Person's Name:</label>
+                            <input type="text" class="inputtxt" id="b7">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Encouraging Saying:</label>
+                            <input type="text" class="inputtxt" id="b8">
+                        </div>
+                            
+                        <input type="button" onclick="submitTwo()" value="Submit" class="button-submit">
+                    </form>
+                </div>
+                <div class="story-page">
+                    <h2 class="page-title" id="displayTitleTwo">
+                        The Story Will Display Here
+                    </h2>
+                    <p class="story-text" id="displayTwo">
+
+                    </p>
+                </div>
+            </div>
+            <div class="story no-show" id="3">
+                <div class="input-page">
+                    <h2 class="page-title" style="color: white;">
+                        A Story About Going Into A Forest
+                    </h2>
+                    <form class="input-form">
+                        <div class="colored">
+                            <label class="labeltxt" for="">Name of a Place:</label>
+                            <input type="text" class="inputtxt" id="c1">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Verb:</label>
+                            <input type="text" class="inputtxt" id="c2">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Adjective:</label>
+                            <input type="text" class="inputtxt" id="c3">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Color:</label>
+                            <input type="text" class="inputtxt" id="c4">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Feeling:</label>
+                            <input type="text" class="inputtxt" id="c5">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">A Sound:</label>
+                            <input type="text" class="inputtxt" id="c6">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Animal (plural):</label>
+                            <input type="text" class="inputtxt" id="c7">
+                        </div>
+
+                        <div class="colored">
+                            <label class="labeltxt" for="">Verb (ending in ing):</label>
+                            <input type="text" class="inputtxt" id="c8">
+                        </div>
+                            
+                        <input type="button" onclick="submitThree()" value="Submit" class="button-submit">
+                    </form>
+                </div>
+                <div class="story-page">
+                    <h2 class="page-title" id="displayTitleThree">
+                        The Story Will Display Here
+                    </h2>
+                    <p class="story-text" id="displayThree">
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
