@@ -1,0 +1,627 @@
+/* General Styling  -------------------------------------------------------------------------------------------------------*/
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Tahoma;
+    overflow-x: hidden;
+}
+
+.noShow {
+    display: none;
+}
+
+
+
+
+/* Nav Bar ------------------------------------------------------------------------------------------------------- */
+
+.nav {
+    height: 9vh;
+    width: 100%;
+    padding: 0vh 10vw;
+    box-sizing: border-box;
+    z-index: 100;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    transition: 0.5s;
+}
+
+.logoContainer {
+    height: 100%;
+    width: 100%;
+}
+
+.logoContainerOne {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.navImg {
+    height: 60%;
+    width: auto;
+    filter: invert(99%) sepia(2%) saturate(733%) hue-rotate(90deg) brightness(119%) contrast(100%);
+}
+
+.navTitle {
+    height: auto;
+    width: fit-content;
+    font-size: 30px;
+    text-wrap: nowrap;
+    padding: 0px;
+    margin: 0px 0px 0px 20px;
+    color: white;
+}
+
+.navButton {
+    height: 100%;
+    width: 100%;
+    border: 0px solid black;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 5%;
+    transition: 0.3s;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+.navButton:hover {
+    text-shadow: 15px 0px 25px rgba(0, 0, 0, 1);
+    color: #bbeeff;
+}
+
+.navExtra {
+    height: 100%;
+    width: 10%;
+    padding: 0px;
+    font-size: 20px;
+    transition: 0.3s;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.dropContent {
+    height: 0px;
+    width: 150px;
+    position: fixed;
+    transition: 0.3s;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.navExtra:hover .dropContent {
+    height: 100px;
+    display: block;
+    opacity: 1;
+    backdrop-filter: brightness(60%) blur(2px);
+    box-shadow: -3px 3px 5px rgba(0,0,0,0.5);
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+.navButtonExtra {
+    height: 50%;
+    width: 100%;
+    padding: 0px;
+    border: 0px solid black;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.navButtonExtra:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Front ----------------------------------------------------------------------------------------------------------------------*/
+
+.front {
+    height: auto;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.one {
+    background-image: linear-gradient(to bottom, rgba(95, 95, 95, 0.4), rgba(0, 0, 0, 1)), url("img/home.jpg");
+    background-position: top;
+}
+
+.two {
+    background-image: linear-gradient(to bottom, rgba(95, 95, 95, 0.4), rgba(0, 0, 0, 1)), url("img/history.jpg");
+    background-position: bottom;
+}
+
+.three {
+    background-image: linear-gradient(to bottom, rgba(95, 95, 95, 0.4), rgba(0, 0, 0, 1)), url("img/religion2.jpg");
+    background-position: center;
+}
+
+.four {
+    background-image: linear-gradient(to bottom, rgba(95, 95, 95, 0.4), rgba(0, 0, 0, 1)), url("img/customs.jpg");
+    background-position: center;
+}
+
+.five {
+    background-image: linear-gradient(to bottom, rgba(95, 95, 95, 0.4), rgba(0, 0, 0, 1)), url("img/fine.jpg");
+    background-position: center;
+}
+
+.six {
+    background-image: linear-gradient(to bottom, rgba(95, 95, 95, 0.4), rgba(0, 0, 0, 1)), url("img/architecture.jpg");
+    background-position: center;
+}
+
+.seven {
+    background-image: linear-gradient(to bottom, rgba(95, 95, 95, 0.4), rgba(0, 0, 0, 1)), url("img/society.jpg");
+    background-position: center;
+}
+
+.titleDiv {
+    height: fit-content;
+    width: fit-content;
+    margin: 35vh 0px 40vh 20vw;
+}
+
+.title {
+    height: auto;
+    width: fit-content;
+    margin: 10px 0px 25px 0px;
+    font-size: 38px;
+    color: white;
+    font-weight: 600;
+}
+
+.subTitle {
+    height: auto;
+    width: fit-content;
+    margin: 0px;
+    font-size: 18px;
+    color: rgb(235, 235, 235);
+    font-weight: 500;
+    font-style: italic;
+}
+
+.subTitlePage {
+    height: auto;
+    width: fit-content;
+    margin: 0px;
+    padding: 5px 7px;
+    border: 2px solid white;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+}
+
+.barNav  {
+    height: 4px;
+    width: 0%;
+    position: fixed;
+    top: 9vh;
+    transition: 0.5s;
+    background-image: linear-gradient(to bottom right, #bbeeff, #a5e1f5);
+    z-index: 101;
+}
+
+
+
+
+/* Content ------------------------------------------------------------------------------------------------------- */
+
+.content {
+    height: auto;
+    width: 100%;
+    padding: 0px;
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.5s;
+    position: absolute;
+    z-index: 50;
+}
+
+.diagonal {
+    height: 300px;
+    width: 150%;
+    margin: 0px;
+    position: absolute;
+    top: -20vh;
+    left: -10vw;
+    transition: 0.5s;
+    transform: rotate(-2deg);
+    z-index: -1;
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+.blackText {
+    color: black;
+}
+
+.blackishText {
+    color: rgb(32, 32, 32);
+}
+
+.whiteText {
+    color: white;
+}
+
+.whitishText {
+    color: rgb(212, 212, 212);
+}
+
+.infoArea {
+    height: auto;
+    width: 100vw;
+    margin-bottom: 50px;
+    padding: 100px 0px 150px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.infoAreaLate {
+    margin-top: 50px;
+    padding: 50px 0px;
+}
+
+.infoItem {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.infoRight {
+    padding: 0px 100px 0px 0px;
+}
+
+.areaTitle {
+    height: auto;
+    width: 100%;
+    margin: 30px 0px 15px 0px;
+    font-size: 37px;
+    text-align: center;
+}
+
+.areaText {
+    height: auto;
+    width: 100%;
+    margin: 25px 0px 25px 0px;
+    padding: 0px 15%;
+    box-sizing: border-box;
+    font-size: 19px;
+    text-align: center;
+}
+
+.areaDivider {
+    height: 4px;
+    width: 50%;
+}
+
+.areaImg {
+    max-height: 300px;
+    width: 65%;
+    margin: 25px 0px 0px 15%;
+    object-fit: cover;
+}
+
+.middle {
+    height: auto;
+    width: 100%;
+    padding: 80px 0px 50px 0px;
+    margin: 50px 0px 0px 0px;
+}
+
+.middleTitle {
+    height: auto;
+    width: 100%;
+    margin: 30px 0px 15px 0px;
+    font-size: 37px;
+    text-align: center;
+}
+
+.middleText {
+    height: auto;
+    width: 100%;
+    margin: 25px 0px 25px 0px;
+    padding: 0px 30%;
+    box-sizing: border-box;
+    font-size: 19px;
+    text-align: center;
+}
+
+.middleDivider {
+    height: 4px;
+    width: 30vw;
+}
+
+.linkArea {
+    height: auto;
+    width: 100%;
+    margin: 0px 0px 50px 0px;
+    padding: 10vh 20vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}
+
+.linkItem {
+    height: auto;
+    width: 250px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.linkTitle {
+    height: fit-content;
+    text-align: left;
+    margin: 10px 0px 10px 0px;
+    padding: 0px 10%;
+    box-sizing: border-box;
+    font-size: 30px;
+}
+
+.linkDivider {
+    height: 2px;
+    width: 100%;
+    border: 0px;
+}
+
+.linkText {
+    height: auto;
+    width: 100%;
+    padding: 0px 10%;
+    box-sizing: border-box;
+    font-size: 19px;
+}
+
+.linkButton {
+    height: auto;
+    width: 125px;
+    background-color: #002b3a;
+    border: 1px solid #002b3a;
+    margin: 0px 0px 20px 10%;
+    padding: 10px 0px;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.linkButton:hover {
+    background-color: white;
+    color: #005774;
+}
+
+.article {
+    height: auto;
+    width: 50%;
+    min-width: 500px;
+    max-width: 1000px;
+    box-sizing: border-box;
+    margin: 50px auto 0px auto;
+    padding: 25px 100px;
+}
+
+.articleTitle {
+    height: auto;
+    width: 100%;
+    margin: 35px 0px 15px 0px;
+    font-size: 35px;
+    padding: 0px;
+    font-weight: 500;
+}
+
+.articleText {
+    height: auto;
+    width: auto;
+    margin: 15px 0px 25px 0px;
+    font-size: 19px;
+    padding: 0px;
+    line-height: 27px;
+}
+
+.timeline {
+    height: auto;
+    width: 40%;
+    margin: 50px auto 50px auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.timelineBar {
+    height: auto;
+    width: 30px;
+    margin: 0px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.arrow {
+    margin: 0px auto 0px auto;
+    width: 0; 
+    height: 0; 
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 50px solid #000000;
+}
+
+.timelineContent {
+    height: auto;
+    width: 100%;
+    display: inline-block;
+    margin: 0px 0px 0px 10%;
+}
+
+.fullImg {
+    max-height: 200px;
+    width: 100%;
+    margin: 50px 0px;
+    object-fit: cover;
+}
+
+.rotate {
+    position: absolute;
+    width: 100px;
+    top: 500px;
+    z-index: 0;
+    transition: 0.1s;
+}
+
+.rotateImg {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+    transition: 0.1s;
+}
+
+.triple {
+    height: auto;
+    width: 70%;
+    margin: 50px auto 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 50px;
+    gap: 50px;
+}
+
+.tripleItem {
+    height: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center center;
+    flex-basis: 30%;
+    box-shadow: -5px 5px 7px rgba(0, 0, 0, 0.3);
+}
+
+.filter {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 35px 50px;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    backdrop-filter: blur(5px) brightness(40%);
+    text-shadow: 0px 0px 15px black;
+}
+
+.filter:hover {
+    opacity: 1;
+}
+
+.multiPage {
+    height: 500px;
+    width: 50%;
+    margin: 100px auto;
+}
+
+.multiPageItem {
+    height: inherit;
+    width: 100%;
+}
+
+.buttonDiv {
+    padding: 0px 10%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pageButton {
+    height: auto;
+    width: 125px;
+    background-color: #002b3a;
+    border: 1px solid #002b3a;
+    margin: 0px 0px 20px 0px;
+    padding: 10px 0px;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+.pageButton:hover {
+    background-color: white;
+    color: #005774;
+}
+
+.pageText {
+    height: auto;
+    width: 100%;
+    margin: 25px 0px 25px 0px;
+    padding: 0px 10%;
+    box-sizing: border-box;
+    font-size: 19px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+/* Footer ----------------------------------------------------------------------------------------------------------------------*/
+
+.footer {
+    height: auto;
+    width: 100%;
+    background-color: black;
+    overflow: auto;
+    margin: 100px 0px 0px 0px;
+}
+
+.footTitle {
+    font-weight: 400;
+    text-align: center;
+    margin: 20px auto 15px auto;
+    color: white;
+    font-size: 25px;
+}
+
+.footDivider {
+    height: 2px;
+    width: 30%;
+    margin: 0px auto;
+    border: 0px;
+    background-color: rgb(221, 221, 221);
+}
+
+.footText {
+    text-align: center;
+    margin: 15px auto 20px auto;
+    color: rgb(212, 212, 212);
+    font-size: 16px;
+}
